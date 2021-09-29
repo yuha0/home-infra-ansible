@@ -1,0 +1,4 @@
+env
+# can't leak my nextdns addresses
+inventory/group_vars/all/all.yml
+inventory/artifacts

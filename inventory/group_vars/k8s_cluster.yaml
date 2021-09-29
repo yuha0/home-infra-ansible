@@ -1,0 +1,7 @@
+ansible_user: zzyzxd
+packages:
+- fish
+- neovim
+- nfs-client
+- sudo
+- python3-apt

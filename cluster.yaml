@@ -1,0 +1,14 @@
+- name: Ensure prerequisites
+  hosts: all
+  become: yes
+  # # only need this for the first run before sudo is installed
+  # become_method: su
+  roles:
+  - roles/common
+  tags:
+  - common
+
+- name: Run kubespray
+  import_playbook: kubespray/cluster.yml
+  become: yes
+  become_user: root
