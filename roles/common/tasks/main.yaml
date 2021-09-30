@@ -1,9 +1,8 @@
 - name: Install required packages
   apt:
-    name: '{{ item }}'
+    name: '{{ custom_packages }}'
     update_cache: yes
     cache_valid_time: 3600
-  with_items: '{{ packages }}'
   tags:
   - packages
 
@@ -65,3 +64,18 @@
   when: ansible_architecture == "x86_64"
   tags:
   - lvm
+
+- name: Load kernel modules
+  modprobe:
+    name: '{{ item }}'
+    state: present
+  with_items: '{{ kernel_modules }}'
+  tags:
+  - kernel_modules
+
+- name: persistent kernel modules
+  template:
+    src: modules.conf.j2
+    dest: /etc/modules-load.d/k0s.conf
+  tags:
+  - kernel_modules

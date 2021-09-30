@@ -6,7 +6,7 @@
 # peer_with_router: false
 
 # Enables Internet connectivity from containers
-nat_outgoing: true
+# nat_outgoing: true
 
 # Enables Calico CNI "host-local" IPAM plugin
 # calico_ipam_host_local: true
@@ -43,7 +43,7 @@ nat_outgoing: true
 # calico_veth_mtu: 1440
 
 # Advertise Cluster IPs
-calico_advertise_cluster_ips: false
+# calico_advertise_cluster_ips: true
 
 # Advertise Service External IPs
 # calico_advertise_service_external_ips:
@@ -56,10 +56,10 @@ calico_advertise_cluster_ips: false
 # - y.y.y.y/16
 
 # Choose data store type for calico: "etcd" or "kdd" (kubernetes datastore)
-calico_datastore: "kdd"
+# calico_datastore: "kdd"
 
 # Choose Calico iptables backend: "Legacy", "Auto" or "NFT"
-calico_iptables_backend: "Auto"
+# calico_iptables_backend: "Legacy"
 
 # Use typha (only with kdd)
 # typha_enabled: false

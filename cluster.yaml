@@ -1,5 +1,5 @@
 - name: Ensure prerequisites
-  hosts: all
+  hosts: k8s_cluster
   become: yes
   # # only need this for the first run before sudo is installed
   # become_method: su

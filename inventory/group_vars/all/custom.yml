@@ -1,0 +1,10 @@
+ansible_user: zzyzxd
+custom_packages:
+- fish
+- neovim
+- nfs-client
+- sudo
+kernel_modules:
+- br_netfilter
+- nf_conntrack
+- overlay
